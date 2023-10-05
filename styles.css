@@ -1,4 +1,4 @@
-/* Estilos generales */
+/* General */
 * {
     margin: 0;
     padding: 0;
@@ -6,8 +6,9 @@
 }
 
 body {
-    font-family: Arial, sans-serif;
     background-color: #fcbac6;
+    font-family: "Fira Sans", sans-serif;
+
 }
 
 header {
@@ -17,7 +18,7 @@ header {
     padding: 20px;
 }
 
-/* Estilos de secciones */
+/* Main */
 section {
     background-color: #fcbac6;
     color: #9988BD;
@@ -29,6 +30,8 @@ section {
 
 main {
     background-color: #fcbac6;
+    padding: 20px;
+    align-items: center;
 }
 
 #contenedorProd {
@@ -68,7 +71,11 @@ h4 {
 button {
     width: 10rem;
     height: 2rem;
-    border-radius: 2rem!important;
+    background-color: #ef6f8b;
+    color: azure;
+    font-weight: bold;
+    opacity: 60%;
+    border-radius: 1rem!important;
 }
 
 .tarjeta {
@@ -88,6 +95,7 @@ img {
     width: 250px;
     height: 250px;
     border-radius: 2rem;
+    padding: 5%;
 }
 
 p {
@@ -108,7 +116,7 @@ p {
     display: none;
 }
 
-/* Estilos de footer */
+/* Footer */
 footer {
     text-align: center;
     background-color: #fcbac6;

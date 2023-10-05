@@ -12,13 +12,13 @@ let productos = [
     { nombre: "Cabina Sun Led UV", tipo: "Cabina", precio: 13999.99, stock: 7, id: "11", rutaImagen: "cabina2.jpg" }
 ];
 
-// Copia de respaldo de la lista de productos original
+// Back up de la lista original
 let productosOriginales = [...productos];
 
 let carritoRecuperado = localStorage.getItem("carrito");
 let carrito = carritoRecuperado ? JSON.parse(carritoRecuperado) : [];
 
-// Función para renderizar productos
+// Renderizar productos
 function renderizarProductos(productos, carrito) {
     let contenedor = document.getElementById("contenedorProd");
     contenedor.innerHTML = "";
@@ -36,14 +36,13 @@ function renderizarProductos(productos, carrito) {
         let botonAgregarAlCarrito = document.getElementById(producto.id);
         botonAgregarAlCarrito.addEventListener("click", (e) => agregarProductoAlCarrito(producto, carrito));
         
-        // Verificar si el producto está en el carrito
         if (carrito.find(item => item.id === producto.id)) {
             botonAgregarAlCarrito.disabled = true;
         }
     });
 }
 
-// Función para agregar un producto al carrito
+// Agregar prod al carrito
 function agregarProductoAlCarrito(producto, carrito) {
     let productoEnCarrito = carrito.find(item => item.id === producto.id);
 
@@ -67,7 +66,7 @@ function agregarProductoAlCarrito(producto, carrito) {
     renderizarCarrito(carrito);
 }
 
-// Función para renderizar el carrito
+// Renderizar carrito
 function renderizarCarrito(carrito) {
     let divCarrito = document.getElementById("carrito");
     divCarrito.innerHTML = "";
@@ -99,7 +98,7 @@ function renderizarCarrito(carrito) {
     }
 }
 
-// Función para finalizar la compra
+// Finalizar compra
 function finalizarCompra() {
     localStorage.removeItem("carrito");
     carrito = [];
@@ -108,26 +107,24 @@ function finalizarCompra() {
     alert("¡Gracias por su compra!")
 }
 
-// Función para filtrar y renderizar productos
+// Filtrar y renderizar productos
 function filtrarYRenderizar() {
     let buscador = document.getElementById("buscador").value.toLowerCase();
     let productosFiltrados = productos.filter(producto => producto.nombre.toLowerCase().includes(buscador));
     renderizarProductos(productosFiltrados, carrito);
 }
 
-// Evento para el botón de buscar
+// Boton Buscar
 let buscar = document.getElementById("buscar");
 buscar.addEventListener("click", filtrarYRenderizar);
 
 let buscador = document.getElementById("buscador");
 buscador.addEventListener("keyup", function(event) {
     if (event.key === "Enter") {
-        // Filtrar productos cuando se presiona Enter
         filtrarYRenderizar();
     }
 });
 
-// Llamada inicial para renderizar productos
 renderizarProductos(productos, carrito);
 
 let botonVerOcultar = document.getElementById("verOcultar");
@@ -140,35 +137,31 @@ function verOcultarCarrito() {
     contenedorProd.classList.toggle("oculta");
 }
 
+// Resetear barra de busqueda
 let resetearBusqueda = document.getElementById("resetearBusqueda");
 resetearBusqueda.addEventListener("click", reiniciarListaProductos);
 
-// Obtener el elemento de selección de categoría
+// Filtrar por categoría
 let filtroCategoria = document.getElementById("filtroCategoria");
 
-// Agregar un evento que se dispare cuando cambie la selección
 filtroCategoria.addEventListener("change", filtrarPorCategoria);
 
 function filtrarPorCategoria() {
-    // Obtener la categoría seleccionada
     let categoriaSeleccionada = filtroCategoria.value;
 
-    // Filtrar los productos según la categoría
     let productosFiltrados = productos;
 
     if (categoriaSeleccionada !== "") {
         productosFiltrados = productos.filter(producto => producto.tipo === categoriaSeleccionada);
     }
 
-    // Renderizar los productos filtrados
     renderizarProductos(productosFiltrados, carrito);
 }
 
-// Función para reiniciar la lista de productos
+// Reiniciar lista despues de buscar
 function reiniciarListaProductos() {
-    // Utiliza la lista de productos original
-    renderizarProductos(productosOriginales, carrito);
-    document.getElementById("buscador").value = ""; // Limpia el campo de búsqueda
+    renderizarProductos(productosOriginales, carrito)
+    document.getElementById("buscador").value = ""
 }
-// Llamada inicial para renderizar el carrito
+
 renderizarCarrito(carrito);
