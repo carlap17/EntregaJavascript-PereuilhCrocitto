@@ -17,25 +17,6 @@ header {
     padding: 20px;
 }
 
-header nav ul {
-    color: #9988bd;
-}
-
-header nav li {
-    text-align: center;
-    font-weight: bold;
-    color: #9988BD;
-}
-
-header nav li:hover {
-    background-color: #fcbac6;
-}
-
-header nav a {
-    color: #9988BD;
-    text-decoration: none;
-}
-
 /* Estilos de secciones */
 section {
     background-color: #fcbac6;
@@ -50,7 +31,7 @@ main {
     background-color: #fcbac6;
 }
 
-.contenedor {
+#contenedorProd {
     display: flex;
     flex-wrap: wrap;
     justify-content: center;
@@ -75,12 +56,22 @@ h2 {
     color: #9988BD
 }
 
-.producto h3 {
+h4 {
     text-align: center;
     font-size: 22px;
 }
 
-.producto {
+.buscador {
+    align-items: flex-end;
+}
+
+button {
+    width: 10rem;
+    height: 2rem;
+    border-radius: 2rem!important;
+}
+
+.tarjeta {
     display: grid;
     place-items: center;
     width: 18.75rem;
@@ -93,16 +84,28 @@ h2 {
     background-color: #fcbac6;
 }
 
-.producto img {
+img {
     width: 250px;
     height: 250px;
     border-radius: 2rem;
 }
 
-.producto p {
+p {
     font-weight: bold;
     font-size: 18px;
-    margin-bottom: 5px;
+}
+
+#carrito {
+    width: 100%;
+    background-color: #9988BD;
+    border: 2px solid #ef6f8b;
+}
+
+.oculta {
+    display: none!important;
+}
+.oculta1 {
+    display: none;
 }
 
 /* Estilos de footer */
