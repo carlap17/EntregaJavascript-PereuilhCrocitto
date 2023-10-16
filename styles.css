@@ -180,9 +180,14 @@ footer {
         align-items: center;
     }
 
-    img {
-        height: 250px;
+    .tarjeta img,
+    .tarjCarrito img {
         width: 250px;
+        height: 250px;
+    }
+
+    .tarjeta {
+        height: auto;
     }
 
     header nav li {
