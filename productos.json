@@ -1,0 +1,90 @@
+[
+    {
+        "nombre": "Esmalte Semipermanente Meliné",
+        "tipo": "Semipermanente",
+        "precio": 4900,
+        "stock": 3,
+        "id": "1",
+        "rutaImagen": "semipermanente1.jpeg"
+    },
+    {
+        "nombre": "Esmalte Semipermanente Kiki",
+        "tipo": "Semipermanente",
+        "precio": 2400,
+        "stock": 1,
+        "id": "2",
+        "rutaImagen": "semipermanente2.jpeg"
+    },
+    {
+        "nombre": "Esmalte Semipermanente Juka",
+        "tipo": "Semipermanente",
+        "precio": 3100,
+        "stock": 6,
+        "id": "3",
+        "rutaImagen": "semipermanente3.jpeg"
+    },
+    {
+        "nombre": "Esmalte Tradicional OPI",
+        "tipo": "Tradicional",
+        "precio": 4800,
+        "stock": 5,
+        "id": "4",
+        "rutaImagen": "tradicional1.jpg"
+    },
+    {
+        "nombre": "Esmalte Tradicional Essie",
+        "tipo": "Tradicional",
+        "precio": 11700,
+        "stock": 5,
+        "id": "5",
+        "rutaImagen": "tradicional2.jpg"
+    },
+    {
+        "nombre": "Esmalte Tradicional Gelize",
+        "tipo": "Tradicional",
+        "precio": 19900,
+        "stock": 9,
+        "id": "6",
+        "rutaImagen": "tradicional3.jpg"
+    },
+    {
+        "nombre": "Press On punta Coffin x600u",
+        "tipo": "Accesorios",
+        "precio": 2200,
+        "stock": 6,
+        "id": "7",
+        "rutaImagen": "press-on.jpg"
+    },
+    {
+        "nombre": "Polvo Aurora",
+        "tipo": "Accesorios",
+        "precio": 1500,
+        "stock": 4,
+        "id": "8",
+        "rutaImagen": "brillos1.jpg"
+    },
+    {
+        "nombre": "Polvo Holográfico",
+        "tipo": "Accesorios",
+        "precio": 1430,
+        "stock": 4,
+        "id": "9",
+        "rutaImagen": "brillos2.jpg"
+    },
+    {
+        "nombre": "Cabina Gadnic Led UV",
+        "tipo": "Cabina",
+        "precio": 33099,
+        "stock": 3,
+        "id": "10",
+        "rutaImagen": "cabina1.jpg"
+    },
+    {
+        "nombre": "Cabina Sun Led UV",
+        "tipo": "Cabina",
+        "precio": 13999.99,
+        "stock": 7,
+        "id": "11",
+        "rutaImagen": "cabina2.jpg"
+    }
+]
