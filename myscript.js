@@ -180,7 +180,7 @@ function filtrarPorCategoria() {
 
 // Reiniciar lista despues de buscar
 function reiniciarListaProductos() {
-    renderizarProductos(productosOriginales, carrito)
+    renderizarProductos(productos, carrito)
     document.getElementById("buscador").value = ""
 }
 
