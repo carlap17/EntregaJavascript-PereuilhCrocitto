@@ -161,6 +161,8 @@ function verOcultarCarrito() {
 let resetearBusqueda = document.getElementById("resetearBusqueda")
 resetearBusqueda.addEventListener("click", reiniciarListaProductos)
 
+renderizarProductos()
+
 // Filtrar por categoría
 let filtroCategoria = document.getElementById("filtroCategoria")
 
